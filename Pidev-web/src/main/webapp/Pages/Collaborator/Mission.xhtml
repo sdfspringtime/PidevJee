@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets" template="/Template/template.xhtml">
+<ui:param name="page_name" value="ExpenseForm" />
+<ui:define name="menu">
+<h:form id="form">
+<h1>Mission List</h1>
+<h:panelGroup columns="2">
+<h:form>
+	<h:dataTable value="#{MissionBean.miss}" var="item" border="1"> 
+		<h:column>
+			<f:facet name="header"><h:outputText value="StartDate" /></f:facet> 
+			<h:outputText value="#{item.startDate}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header"><h:outputText value="EndDate" /></f:facet> 
+			<h:outputText value="#{item.endDate}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header"><h:outputText value="Destination" /></f:facet>
+			<h:outputText value="#{item.emplacement}" /></h:column>
+       <p></p>
+       
+
+</h:dataTable>
+</h:form>
+</h:panelGroup>
+</h:form>
+</ui:define>
+</ui:composition>

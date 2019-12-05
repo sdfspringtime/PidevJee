@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets" template="/Template/template.xhtml">
+<ui:param name="page_name" value="ExpenseForm" />
+<ui:define name="menu">
+<h:form id="form">
+<h1>Expense Form</h1>
+<h:panelGrid columns="2">
+<h:outputText value="Description" /> <h:inputText value="#{ExpenseBean.description}" />
+<h:outputText value="Amount" /> <h:inputText value="#{ExpenseBean.amount}" />
+<h:outputText value="Justification" /> <h:inputText value="#{ExpenseBean.justification}" />
+<h:outputText value="Date" /> <h:inputText value="#{ExpenseBean.date}" />
+<h:commandButton id="btn" value="Validate" action="#{ExpenseBean.doCreateEform}" />
+<h:message for="btn"/>
+</h:panelGrid>
+</h:form>
+</ui:define>
+</ui:composition>
